@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Grow | Luxury Flower Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#home" class="logo">Bloom & Grow</a>
+        <div class="nav__links">
+            <a href="#home" class="nav__link">Home</a>
+            <a href="#about" class="nav__link">About</a>
+            <a href="#products" class="nav__link">Products</a>
+            <a href="#services" class="nav__link">Services</a>
+            <a href="#contact" class="nav__link">Contact</a>
+        </div>
+        <div class="nav__buttons" id="authButtons">
+            <a href="login.html" class="nav__btn login">Login</a>
+            <a href="signup.html" class="nav__btn signup">Sign Up</a>
+            <button id="logout-button" onclick="logout()" style="display: none;">Logout</button>
+        </div>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero__content" data-aos="fade-up">
+            <h1 class="hero__title">Welcome to Bloom & Grow</h1>
+            <p class="hero__subtitle">Where Nature Meets Elegance</p>
+            <a href="#contact" class="cta-btn">Order Now</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <h2 class="section__title" data-aos="fade-up">Our Story</h2>
+        <div class="about__content">
+            <div class="about__text" data-aos="fade-right">
+                <p>At Bloom & Grow, we believe in the power of flowers to transform spaces and touch hearts. Our passionate team of florists crafts stunning arrangements that bring nature's beauty into your everyday life.</p>
+                <br>
+                <p>With years of experience and an eye for detail, we create unique floral experiences that capture the essence of every occasion.</p>
+            </div>
+            <img src="assets/about.png" alt="Flower arrangement" class="about__image" data-aos="fade-left">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services">
+        <h2 class="section__title" data-aos="fade-up">Our Services</h2>
+        <div class="services__grid">
+            <div class="service__card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service__icon">🌸</div>
+                <h3>Custom Arrangements</h3>
+                <p>Personalized floral designs tailored to your style and occasion.</p>
+            </div>
+            <div class="service__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service__icon">👰</div>
+                <h3>Wedding Flowers</h3>
+                <p>Beautiful wedding bouquets and decorations for your special day.</p>
+            </div>
+            <div class="service__card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service__icon">🏢</div>
+                <h3>Corporate Events</h3>
+                <p>Elegant floral solutions for corporate spaces and events.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="section products">
+      <h2 class="section__title" data-aos="fade-up">Our Collection</h2>
+      
+      <div class="filters" data-aos="fade-up">
+          <button class="filter__btn active" data-filter="all">All</button>
+          <button class="filter__btn" data-filter="bouquets">Bouquets</button>
+          <button class="filter__btn" data-filter="arrangements">Arrangements</button>
+          <button class="filter__btn" data-filter="plants">Plants</button>
+      </div>
+  
+      <div class="products__grid">
+          <!-- Product 1 -->
+          <div class="product__card" data-aos="fade-up" data-category="bouquets">
+              <div class="product__badge">Best Seller</div>
+              <img src="assets/product1.png" alt="Rose Bouquet" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Elegant Rose Bouquet</h3>
+                  <p class="product__description">A stunning arrangement of premium roses in soft pink and cream hues.</p>
+                  <p class="product__price">$89.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+  
+          <!-- Product 2 -->
+          <div class="product__card" data-aos="fade-up" data-category="arrangements">
+              <img src="assets/product2.png" alt="Seasonal Arrangement" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Seasonal Blooms</h3>
+                  <p class="product__description">Beautiful arrangement featuring the season's finest flowers.</p>
+                  <p class="product__price">$69.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+  
+          <!-- Product 3 -->
+          <div class="product__card" data-aos="fade-up" data-category="plants">
+              <div class="product__badge">New</div>
+              <img src="assets/product3.png" alt="Indoor Plant" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Peace Lily Plant</h3>
+                  <p class="product__description">Easy-care indoor plant perfect for purifying your space.</p>
+                  <p class="product__price">$49.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+  
+          <!-- Product 4 -->
+          <div class="product__card" data-aos="fade-up" data-category="bouquets">
+              <img src="assets/product4.png" alt="Wildflower Bouquet" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Wildflower Dream</h3>
+                  <p class="product__description">Rustic bouquet of fresh wildflowers and greenery.</p>
+                  <p class="product__price">$59.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+  
+          <!-- Product 5 -->
+          <div class="product__card" data-aos="fade-up" data-category="arrangements">
+              <img src="assets/product5.png" alt="Garden Arrangement" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Garden Oasis</h3>
+                  <p class="product__description">Beautiful garden arrangement featuring vibrant colors and fresh herbs.</p>
+                  <p class="product__price">$79.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 6 -->
+          <div class="product__card" data-aos="fade-up" data-category="plants">
+              <img src="assets/product6.png" alt="Succulent Garden" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Succulent Garden</h3>
+                  <p class="product__description">Assortment of low-maintenance succulents in a modern planter.</p>
+                  <p class="product__price">$39.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 7 -->
+          <div class="product__card" data-aos="fade-up" data-category="bouquets">
+              <img src="assets/product7.png" alt="Tulip Bouquet" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Spring Tulip Bouquet</h3>
+                  <p class="product__description">Vibrant tulips in a rainbow of colors to brighten your day.</p>
+                  <p class="product__price">$49.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 8 -->
+          <div class="product__card" data-aos="fade-up" data-category="arrangements">
+              <img src="assets/product8.png" alt="Outdoor Arrangement" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Outdoor Oasis</h3>
+                  <p class="product__description">Beautiful outdoor arrangement featuring lush greenery and fresh herbs.</p>
+                  <p class="product__price">$59.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 9 -->
+          <div class="product__card" data-aos="fade-up" data-category="plants">
+              <img src="assets/product9.png" alt="Cacti Garden" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Cacti Garden</h3>
+                  <p class="product__description">Assortment of low-maintenance cacti in a modern planter.</p>
+                  <p class="product__price">$29.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>  
+              </div>
+          </div>
+          <!-- Product 10 -->
+          <div class="product__card" data-aos="fade-up" data-category="bouquets">
+              <img src="assets/product10.png" alt="Orchid Bouquet" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Orchid Elegance</h3>
+                  <p class="product__description">Exotic orchids in a sophisticated arrangement for a touch of luxury.</p>
+                  <p class="product__price">$99.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 11 -->
+          <div class="product__card" data-aos="fade-up" data-category="arrangements">
+              <img src="assets/product11.png" alt="Indoor Arrangement" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Indoor Bliss</h3>
+                  <p class="product__description">Beautiful indoor arrangement featuring lush greenery and fresh herbs.</p>
+                  <p class="product__price">$69.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+          <!-- Product 12 -->
+          <div class="product__card" data-aos="fade-up" data-category="plants">
+              <img src="assets/product12.png" alt="Indoor Bamboo" class="product__image">
+              <div class="product__content">
+                  <h3 class="product__title">Indoor Bamboo</h3>
+                  <p class="product__description">indoor bamboo in a modern planter. Perfect for air purification.</p>
+                  <p class="product__price">$39.99</p>
+                  <a href="#" class="product__btn">Add to Cart</a>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 class="section__title" data-aos="fade-up">Get in Touch</h2>
+        <div class="contact__content">
+            <form class="contact__form" data-aos="fade-up">
+                <input type="text" placeholder="Your Name" class="form__input" required>
+                <input type="email" placeholder="Your Email" class="form__input" required>
+                <textarea placeholder="Your Message" class="form__input" rows="5" required></textarea>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__content">
+          <!-- About Section -->
+          <div class="footer__section">
+              <h3 class="footer__title">About Bloom & Grow</h3>
+              <p>Bringing nature's beauty to your doorstep with our carefully crafted floral arrangements and exceptional service.</p>
+              <div class="footer__social">
+                  <a href="#" class="social__link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                      </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                          <path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/>
+                          <circle cx="17.5" cy="6.5" r="1.5"/>
+                      </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                      </svg>
+                  </a>
+                  <a href="#" class="social__link">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                          <rect x="2" y="9" width="4" height="12"/>
+                          <circle cx="4" cy="4" r="2"/>
+                      </svg>
+                  </a>
+              </div>
+          </div>
+  
+          <!-- Quick Links -->
+          <div class="footer__section">
+              <h3 class="footer__title">Quick Links</h3>
+              <a href="#about" class="footer__link">About Us</a>
+              <a href="#services" class="footer__link">Services</a>
+              <a href="#products" class="footer__link">Shop</a>
+              <a href="#contact" class="footer__link">Contact</a>
+              <a href="#" class="footer__link">Privacy Policy</a>
+              <a href="#" class="footer__link">Terms of Service</a>
+          </div>
+  
+          <!-- Contact Info -->
+          <div class="footer__section">
+              <h3 class="footer__title">Contact Us</h3>
+              <a href="tel:+1234567890" class="footer__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  (123) 456-7890
+              </a>
+              <a href="mailto:info@bloomandgrow.com" class="footer__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                      <polyline points="22,6 12,13 2,6"/>
+                  </svg>
+                  info@bloomandgrow.com
+              </a>
+              <a href="#" class="footer__link">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                      <circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  123 Flower Street, Garden City
+              </a>
+          </div>
+  
+          <!-- Newsletter -->
+          <div class="footer__section">
+              <h3 class="footer__title">Newsletter</h3>
+              <p>Subscribe to receive updates, access to exclusive deals, and more.</p>
+              <form class="newsletter__form" onsubmit="event.preventDefault();">
+                  <input type="email" class="newsletter__input" placeholder="Enter your email" required>
+                  <button type="submit" class="newsletter__btn">Subscribe</button>
+              </form>
+          </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="footer__bottom">
+          <p>&copy; 2025 Bloom & Grow. All rights reserved.</p>
+          <div class="footer__payments">
+              <div class="payment__icon">💳</div>
+              <div class="payment__icon">💵</div>
+              <div class="payment__icon">🪙</div>
+              <div class="payment__icon">💰</div>
+          </div>
+      </div>
+  </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
